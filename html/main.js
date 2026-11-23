@@ -42,8 +42,8 @@ async function submit(val) {
   addMessage("user", val);
 
   const assistantMessage = addMessage("assistant");
-
-  let fullResponse = "";
+  // quick fix -- no clue what's happening
+  let fullResponse = ">assistant: ";
 
   try {
     const response = await fetch(API, {
