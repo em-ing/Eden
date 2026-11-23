@@ -6,7 +6,7 @@ let isGenerating = false;
 const messages = [
   {
     role: "system",
-    content: "You are a helpful assistant.",
+    content: "You are Eden, an assistant built into the user's computer. You currently have no tools and can only speak to the user. More will be added later.",
   },
 ];
 
