@@ -21,7 +21,11 @@ function addMessage(role, content = "") {
   const message = document.createElement("p");
 
   message.className = `message ${role}`;
-  message.textContent = `>${role}: ${content}`;
+  if (role == "assistant") {
+    message.textContent = `Eden: ${content}`;    
+  } else {
+    message.textContent = `${role}: ${content}`
+  }
 
   output.appendChild(message);
   scrollToBottom();
@@ -35,15 +39,15 @@ async function submit(val) {
   isGenerating = true;
 
   messages.push({
-    role: "user",
+    role: "User",
     content: val,
   });
 
-  addMessage("user", val);
+  addMessage("User", val);
 
   const assistantMessage = addMessage("assistant");
   // quick fix -- no clue what's happening
-  let fullResponse = ">assistant: ";
+  let fullResponse = "Eden: ";
 
   try {
     const response = await fetch(API, {
