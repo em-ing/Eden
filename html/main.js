@@ -46,10 +46,6 @@ function closeActive() {
 
 async function submit(val) {
   if (isGenerating || !val.trim()) return;
-  if (val.trim() == "/info") {
-    createSelector()
-    return
-  }
   isGenerating = true;
 
   messages.push({
@@ -195,6 +191,10 @@ chatInput.addEventListener("keydown", (e) => {
       submit(value);
     }
   }
+  if (e.altKey && e.key == "q") {
+    e.preventDefault()
+    createSelector()
+  } 
   if (e.key == "Escape") {
     closeActive()
   }
