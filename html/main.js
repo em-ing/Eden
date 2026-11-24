@@ -33,9 +33,16 @@ function addMessage(role, content = "") {
   return message;
 }
 
+function createSelector() {
+  document.getElementById("info").style="display: block;"
+}
+
 async function submit(val) {
   if (isGenerating || !val.trim()) return;
-
+  if (val.trim() == "/info") {
+    createSelector()
+    return
+  }
   isGenerating = true;
 
   messages.push({

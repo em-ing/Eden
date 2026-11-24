@@ -1,50 +1,60 @@
-            /*   https://catppuccin.com/palette/ (Frappe) */
-            :root {
-                --text: #c6d0f5;
-                --base: #303446;
-                --mantle: #292c3c;
-                --crust: #232634;
-                --surface1: #51576d;
-                --surface2: #626880;
-                --overlay0: #737994;
-                --overlay1: #838ba7;
-                --overlay2: #949cbb;
-                --subtext0: #a5adce;
-                --subtext1: #b5bfe2
+/*   https://catppuccin.com/palette/ (Frappe) */
+:root {
+  --text: #c6d0f5;
+  --base: #303446;
+  --mantle: #292c3c;
+  --crust: #232634;
+  --surface1: #51576d;
+  --surface2: #626880;
+  --overlay0: #737994;
+  --overlay1: #838ba7;
+  --overlay2: #949cbb;
+  --subtext0: #a5adce;
+  --subtext1: #b5bfe2;
+}
 
-            }
+html,
+body {
+  background-color: var(--base);
+  color: var(--text);
+  overflow-x: hidden;
+}
+.output {
+  width: 90%;
+  height: 70%;
+  position: absolute;
+  margin-left: 5%;
+  margin-bottom: 30%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.output p {
+  margin-top: 10px;
+}
+.chatBar {
+  width: 90%;
+  margin-left: 5%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10%;
+}
 
-            html, body {
-                background-color: var(--base);
-                color: var(--text);
-                overflow-x: hidden;
-            }
-            .output {
-                width: 90%;
-                height: 70%;
-                position: absolute;
-                margin-left: 5%;
-                margin-bottom: 30%;
-                overflow-y: auto;
-                overflow-x: hidden;
-            }
-            .output p {
-                margin-top: 10px;
-            }
-            .chatBar {
-                width: 90%;
-                margin-left: 5%;
-                height: 20%;
-                position: absolute;
-                bottom: 0;
-                padding-bottom: 10%; 
-            }
+.chatBar textarea {
+  width: 100%;
+  height: 100%;
+  background-color: var(--crust);
+  color: var(--text);
+  border: none;
+  font-size: 20px;
+}
 
-            .chatBar textarea {
-                width: 100%;
-                height: 100%;
-                background-color: var(--crust);
-                color: var(--text);
-                border: none;
-                font-size: 20px;
-            }
+.infoblock {
+    display: block;
+    position: absolute; 
+    width: 80vw;
+    height: 50vh;
+    margin-top: 25vh;
+    margin-left: 10vw;
+    background-color: var(--mantle);
+}
