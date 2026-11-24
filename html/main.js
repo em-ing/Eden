@@ -37,6 +37,13 @@ function createSelector() {
   document.getElementById("info").style="display: block;"
 }
 
+function closeActive() {
+  let things = document.querySelectorAll(".closeable")
+  for (let i = 0; i < things.length; i++) {
+    things[i].style = "display: none;"
+  }
+}
+
 async function submit(val) {
   if (isGenerating || !val.trim()) return;
   if (val.trim() == "/info") {
@@ -187,5 +194,8 @@ chatInput.addEventListener("keydown", (e) => {
       chatInput.value = "";
       submit(value);
     }
+  }
+  if (e.key == "Escape") {
+    closeActive()
   }
 });
